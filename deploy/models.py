@@ -19,8 +19,8 @@ class Project(models.Model):
     name = models.CharField(u'项目名称',max_length=64,unique=True)
     deploy_dir = models.CharField(u'部署目录',max_length=64,unique=True)
     tpye_choices = (
-        ('Webuser','webuser'),
-        ('Wwwroot','wwwroot'),
+        ('webuser','webuser'),
+        ('wwwroot','wwwroot')
     )
     Type = models.CharField(u'项目类型',max_length=64,choices=tpye_choices)
     memo = models.TextField(u"备注",blank=True,null=True)
