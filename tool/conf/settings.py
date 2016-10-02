@@ -3,7 +3,7 @@
 configs ={
     'HostID': 1,
     "Server": "localhost",
-    "ServerPort": 8800,
+    "ServerPort": 8000,
     "urls":{
 
         'get_configs' :['api/client/config','get'],
