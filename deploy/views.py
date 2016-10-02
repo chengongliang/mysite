@@ -9,3 +9,7 @@ def client_configs(request,client_id):
     config = config_obj.fetch_configs()
     if config:
         return HttpResponse(json.dumps(config))
+
+def deploy_data_report(request):
+    if request.method == 'POST':
+        print "---->",request.POST
