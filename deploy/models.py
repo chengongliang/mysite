@@ -9,7 +9,7 @@ class Host(models.Model):
     name = models.CharField(max_length=64,unique=True)
     ip_addr = models.GenericIPAddressField(unique=True)
     host_groups = models.ManyToManyField('HostGroup',blank=True)
-    project = models.ManyToManyField('project',blank=True)
+    project = models.ManyToManyField('Project',blank=True)
     memo = models.TextField(u"备注",blank=True,null=True)
 
     def __unicode__(self):
