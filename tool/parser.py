@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 #coding:utf8
+#author:chengongliang
 
 import json
 import urllib
@@ -28,7 +29,7 @@ class Parser_conf(object):
                 req = urllib2.Request(abs_url)
                 req_data = urllib2.urlopen(req,timeout=settings.configs['RequestTimeout'])
                 callback = req_data.read()
-                #print "-->server response:",callback
+                print "-->server response:",callback
                 return callback
             except urllib2.URLError,e:
                 exit("\033[31;1m%s\033[0m"%e)
