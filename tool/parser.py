@@ -13,6 +13,7 @@ class Parser_conf(object):
         self.deploy_info = {}
 
     def load_configs(self):
+        #读取request方法，构建url
         request_type = settings.configs['urls']['get_configs'][1]
         url = "%s/%s" %(settings.configs['urls']['get_configs'][0], settings.configs['HostID'])
         latest_configs = self.url_request(request_type,url)
