@@ -2,6 +2,7 @@
 #coding:utf8
 #author:chengongliang
 
+import os
 import json
 import urllib
 import urllib2
@@ -39,6 +40,7 @@ if __name__ == "__main__":
     info = p.load_configs()['project']
     for pro in info:
         deploy_dir = info[pro][0]
-        tpye = info[pro][1]
+        pro_type = info[pro][1]
+        tmp_dir = os.path.join(settings.configs["Temp_dir"],pro_type,pro)
         print "*" * 30
-        print deploy_dir,tpye
+        print "Project: %s\nDeploy_dir: %s\nTemp_dir: %s\nType: %s"%(pro,deploy_dir,tmp_dir,pro_type)
