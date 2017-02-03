@@ -20,7 +20,6 @@ from article import views as article_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('deploy.api_urls')),
-    #url(r'^blog/', include('article.urls')),
     url(r'^$',article_views.home,name = 'home'),
     url(r'^(?P<id>\d+)/$', article_views.detail, name='detail'),
     url(r'^archives/$', article_views.archives, name = 'archives'),
